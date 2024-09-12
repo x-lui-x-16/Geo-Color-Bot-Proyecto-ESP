@@ -132,30 +132,35 @@ El sistema será diseñado con flexibilidad para permitir la integración de nue
 ## Presupuesto
 A continuación se detalla el presupuesto estimado para el desarrollo del proyecto Geo-Color Bot:
 
-Cantidad	   Detalles del Insumo/Material	                       Monto Unitario	    Monto Total
-    1	        Arduino Mega 2560	                                       -	            $57.31
-    1	        Sensor de Color TCS3200	                                 -	            $9.49
-    4	        Sensor Ultrasónico HC-SR04	                           $5.50            $22.00
-    1	        Puente H TB 6612	                                       -	            $3.50
-    1	        Protoboard	                                             -	            $3.00
-    1	        Kit de Arduino 2WD	                                     -	            $10.00
-    2	        Base de Impresión 3D para Sensores Ultrasónicos	      Donación	        Donación
-    1	        Case de 2 Baterías 18650	                               -	            $3.00
-    2	        Baterías 18650 de 3.7 V	                               $3.50	          $7.00
-    3	        Pack de 10 Cables Dupont Macho-Macho	                 $1.50	          $4.50
-    2	        Pack de 10 Cables Dupont Macho-Hembra	                 $1.50	          $3.00
-    1	        Estación de Soldadura con Cautín	                        -	            $25.95
-    1	        Estaño	                                                  -	            $12.30
-    1	        Caja de Termoretráctiles	                                -	            $6.50
-    1	        Pinza Pelacables	                                        -	            $4.29
-    1      	  Alicate	                                                  -  	          $2.50
-    1	        Alicate de Corte	                                        -	            $3.00
-    1	        Mechero	                                                  -	            $2.00
-    1	        Tape Transparente	                                        -	            $0.50
-    1	        Tape Doble Contacto	                                      -	            $7.00
-    1	        Cinta Eléctrica de Vinilo Super 33	                      -	            $3.00
-    2	        Paquete de Zunchos	                                    $3.50	          $7.00
-              Total:                                                  $15.50          $196.94
+- Arduino Mega 2560 - $57.31
+- Sensor de Color TCS3200 - $9.49
+- Sensor Ultrasónico HC-SR04 (x4) - $22.00 ($5.50 c/u)
+- Puente H TB6612 - $3.50
+- Protoboard - $3.00
+- Kit de Arduino 2WD - $10.00
+    - Incluye:
+    - Base de Acrílico
+    - Motor Amarillo
+    - Rueda
+    - Rueda Loca
+- Base de Impresión 3D para Sensores Ultrasónicos (x2) - Donación
+- Case de 2 Baterías 18650 - $3.00
+- Baterías 18650 de 3.7V (x2) - $7.00 ($3.50 c/u)
+- Pack de 10 Cables Dupont Macho-Macho (x3) - $4.50 ($1.50 c/u)
+- Pack de 10 Cables Dupont Macho-Hembra (x2) - $3.00 ($1.50 c/u)
+- Estación de Soldadura con Cautín - $25.95
+- Estaño - $12.30
+- Caja de Termoretráctiles - $6.50
+- Pinza Pelacables - $4.29
+- Alicate - $2.50
+- Alicate de Corte - $3.00
+- Mechero - $2.00
+- Tape Transparente - $0.50
+- Tape Doble Contacto - $7.00
+- Cinta Eléctrica de Vinilo Super 33 - $3.00
+- Paquete de Zunchos (x2) - $7.00 ($3.50 c/u)
+
+Total - $196.94
 
 ## Conclusión
 Este proyecto ha logrado desarrollar una herramienta educativa innovadora, enfocada en mejorar el aprendizaje para personas con TDAH y daltonismo. Gracias a la integración del sensor de color TCS3200 y los sensores ultrasónicos HC-SR04, el robot es capaz de detectar colores con gran precisión y navegar de forma segura, proporcionando una experiencia educativa interactiva y accesible.
