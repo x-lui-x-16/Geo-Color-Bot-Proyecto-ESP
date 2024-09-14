@@ -17,7 +17,7 @@ Todos los materiales que utilizamos para este proyecto.
     - 1 Rueda Loca
 - ... Protocables
 - Múltiples piezas 3D que se pueden encontrar en el siguiente directorio.
-[Archivos 3D](....)
+[Archivos 3D](archivos3d/)
 
 ## Instrucciones de Construcción
 - Chasis 2wd: https://iesjuanlopezmorillas.es/index.php/departamentos/area-cientifico-tecnologica/tecnologia/blog/102-montaje-chasis-coche-2wd
