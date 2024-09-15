@@ -1,1 +1,1 @@
-En esta carpeta se muestra el código utilizado.
+En esta carpeta encontrarás el código utilizado.
