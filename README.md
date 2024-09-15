@@ -1,4 +1,4 @@
-# Geo-Color-Bot-Proyect
+# Geo-Color-Bot-Proyecto
 Proyecto: "Geo-Color Bot"
 
 ## Materiales de Ingienería
