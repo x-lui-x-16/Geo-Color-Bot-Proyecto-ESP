@@ -16,7 +16,7 @@ Todos los materiales que utilizamos para este proyecto.
     - 2 Ruedas
     - 1 Rueda Loca
 - ... Protocables
-- Múltiples piezas 3D que se pueden encontrar en el siguiente directorio.
+- Múltiples piezas 3D utilizadas se pueden encontrar en el siguiente directorio.
 [Archivos 3D](archivos3d/)
 
 ## Instrucciones de Construcción
