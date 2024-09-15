@@ -1,1 +1,1 @@
-En esta carpeta se muestran todos los componentes electromecánicos utilizados.
+En esta carpeta encontrarás todos los componentes electromecánicos utilizados.
