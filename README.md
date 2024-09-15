@@ -21,8 +21,8 @@ Todos los materiales que utilizamos para este proyecto.
 
 ## Instrucciones de Construcción
 - Chasis 2wd: https://iesjuanlopezmorillas.es/index.php/departamentos/area-cientifico-tecnologica/tecnologia/blog/102-montaje-chasis-coche-2wd
-- Electrónica (Circuito y Batería): [El diagrama del circuito se encuentra en el directorio de esquemas](esquemas/)
-- Código (Para el Arduino): [El código se encuentra en el directorio de src](src/)
+- Electrónica (Circuito y Batería): [El diagrama del circuito se encuentra en la carpeta de esquemas](esquemas/)
+- Código (Para el Arduino): [El código se encuentra en la carpeta de src](src/)
 
 ## Contenido
 
@@ -174,6 +174,7 @@ En resumen, el Geo-Color Bot representa un avance significativo hacia la educaci
 
 ## Componentes Electromecánicos
 
+[A continuación se muestran los componentes electromecánicos que se utilizaron](componentes-electromecánicos/)
 
 ## Gestión de Energía
 
