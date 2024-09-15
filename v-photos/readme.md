@@ -1,1 +1,1 @@
-En esta carpeta se muestran imagenes del vehiculo
+En esta carpeta encontrarás fotografías del vehículo desde diferentes ángulos.
