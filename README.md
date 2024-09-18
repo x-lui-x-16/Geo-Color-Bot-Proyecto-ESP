@@ -1,6 +1,8 @@
 # Geo-Color-Bot-Proyecto
 Proyecto: "Geo-Color Bot"
 
+#If you want this information in English, just search in the github search area like: "Geo-Color-Bot-Project-ENG"; or in my profile you can search for it too.
+
 ## Materiales de Ingienería
 Todos los materiales que utilizamos para este proyecto. 
 - 1 Arduino Mega R3 2560 (https://docs.arduino.cc/hardware/mega-2560/)
