@@ -1,7 +1,7 @@
 # Geo-Color-Bot-Proyecto
 Proyecto: "Geo-Color Bot"
 
-#[English's version](https://github.com/x-lui-x-16/Geo-Color-Bot-Project-ENG)
+[English's version](https://github.com/x-lui-x-16/Geo-Color-Bot-Project-ENG)
 
 ## Materiales de Ingienería
 Todos los materiales que utilizamos para este proyecto. 
