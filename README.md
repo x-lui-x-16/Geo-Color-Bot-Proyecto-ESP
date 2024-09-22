@@ -181,6 +181,41 @@ En resumen, el Geo-Color Bot representa un avance significativo hacia la educaci
 
 ## Explicación del Código
 
+### Mobilidad
+[Código de Mobilidad](src/parted-del-código/Mobilidad.ino)
+- Descripción del Código
+Este código controla dos motores utilizando un controlador de motores dual (como el TB6612), asignando pines del Arduino para gestionar la velocidad y la dirección de cada motor. A continuación, se detalla cómo está estructurado:
+
+1. Definición de Pines
+Se definen los pines para controlar la velocidad (PWM) y la dirección (AIN1, AIN2, BIN1, BIN2) de los motores A y B. Además, se asigna un pin para controlar el estado de los motores (standby).
+2. Variables y Matrices
+waitTime establece el tiempo de espera entre cada fase de movimiento.
+speed define la velocidad inicial de los motores, la cual puede ser modificada en el código.
+Las matrices pinMotorA y pinMotorB agrupan los pines de cada motor, facilitando su control en las funciones.
+3. Enumeraciones para Movimiento y Giro
+Se utilizan enumeraciones (enum) para definir las posibles direcciones de movimiento (adelante, atrás) y de giro (horario, antihorario), haciendo el código más legible y fácil de entender.
+4. Función setup()
+Aquí se configuran los pines de salida para controlar los motores. Los pines de dirección y velocidad se preparan para enviar señales a los motores.
+5. Función loop()
+Esta función es el bucle principal del programa, donde se ejecutan las siguientes acciones:
+Activar los motores mediante la función enableMotors().
+Mover hacia adelante a velocidad 15.
+Mover hacia atrás a velocidad 15.
+Girar en sentido horario a velocidad 15.
+Girar en sentido antihorario a velocidad 15.
+Detener los motores mediante la función fullStop().
+Cada acción está separada por un retraso (delay(waitTime)) para observar el comportamiento de los motores antes de pasar a la siguiente acción.
+6. Funciones de Control de Movimiento
+move(direction, speed): Mueve los motores hacia adelante o atrás dependiendo de la dirección indicada.
+turn(direction, speed): Gira el vehículo en el sentido indicado (horario o antihorario), moviendo un motor hacia adelante y el otro hacia atrás.
+7. Funciones Auxiliares
+moveMotorForward(pinMotor, speed): Controla un motor para que gire hacia adelante, estableciendo la dirección y la velocidad mediante PWM.
+moveMotorBackward(pinMotor, speed): Controla un motor para que gire hacia atrás.
+stopMotor(pinMotor): Detiene el motor bajando la velocidad a 0 y estableciendo ambos pines de dirección en LOW.
+enableMotors() y disableMotors(): Activan o desactivan los motores controlando el pin de standby (pinSTBY).
+
+Resumen
+Este código ofrece un control básico pero flexible para un sistema con dos motores, permitiendo mover el vehículo hacia adelante, atrás y realizar giros. Las funciones están organizadas de manera que es fácil modificar la velocidad, dirección y comportamiento general del sistema, lo que lo hace ideal para robots móviles básicos o proyectos de control de motores en Arduino.
 
 ## Componentes Electromecánicos
 
