@@ -183,7 +183,9 @@ En resumen, el Geo-Color Bot representa un avance significativo hacia la educaci
 
 ### Mobilidad
 [Código de Mobilidad](src/parted-del-código/Mobilidad.ino)
-- Descripción del Código
+
+#### Descripción del Código
+
 Este código controla dos motores utilizando un controlador de motores dual (como el TB6612), asignando pines del Arduino para gestionar la velocidad y la dirección de cada motor. A continuación, se detalla cómo está estructurado:
 
 1. Definición de Pines
@@ -214,7 +216,8 @@ moveMotorBackward(pinMotor, speed): Controla un motor para que gire hacia atrás
 stopMotor(pinMotor): Detiene el motor bajando la velocidad a 0 y estableciendo ambos pines de dirección en LOW.
 enableMotors() y disableMotors(): Activan o desactivan los motores controlando el pin de standby (pinSTBY).
 
-Resumen
+#### Resumen
+
 Este código ofrece un control básico pero flexible para un sistema con dos motores, permitiendo mover el vehículo hacia adelante, atrás y realizar giros. Las funciones están organizadas de manera que es fácil modificar la velocidad, dirección y comportamiento general del sistema, lo que lo hace ideal para robots móviles básicos o proyectos de control de motores en Arduino.
 
 ## Componentes Electromecánicos
