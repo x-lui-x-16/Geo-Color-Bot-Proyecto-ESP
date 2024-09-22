@@ -182,7 +182,7 @@ En resumen, el Geo-Color Bot representa un avance significativo hacia la educaci
 ## Explicación del Código
 
 ### Mobilidad
-[Código de Mobilidad](src/parted-del-código/Mobilidad.ino)
+[Código de Mobilidad](src/partes-del-código/Mobilidad.ino)
 
 #### Descripción del Código
 
