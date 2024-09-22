@@ -1,7 +1,7 @@
 # Geo-Color-Bot-Proyecto
 Proyecto: "Geo-Color Bot"
 
-[English's version](https://github.com/x-lui-x-16/Geo-Color-Bot-Project-ENG)
+[Version en Inglés](https://github.com/x-lui-x-16/Geo-Color-Bot-Project-ENG)
 
 ## Materiales de Ingienería
 Todos los materiales que utilizamos para este proyecto. 
@@ -222,7 +222,7 @@ Este código ofrece un control básico pero flexible para un sistema con dos mot
 
 ## Componentes Electromecánicos
 
-[A continuación se muestran los componentes electromecánicos que se utilizaron](componentes-electromecánicos/)
+[A continuación se muestran los componentes electromecánicos que se utilizaron](componentes-electromecánico/)
 
 ## Gestión de Energía
 
