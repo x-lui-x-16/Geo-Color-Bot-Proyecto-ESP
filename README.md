@@ -188,12 +188,19 @@ Este código está diseñado para manejar un robot que utiliza varios sensores u
 #### Definición de Pines
 
 // Definición de Pines de Sensor de Color (TCS3200)
+
 #define OUT 2
+
 #define S0 3
+
 #define S1 4
+
 #define S2 5
+
 #define S3 6
+
 #define LED 7
+
 
 Se definen los pines para conectar el sensor de color TCS3200. Estos pines controlan la configuración del sensor para leer los diferentes valores de color y activar su LED:
 - OUT es el pin donde se recibe el pulso del sensor, que varía en función del color detectado.
@@ -202,14 +209,23 @@ Se definen los pines para conectar el sensor de color TCS3200. Estos pines contr
 
 
 // Definición de Pines de Sensores US (HC-SR04)
+
 #define ECHO1 22 // Sensor delantero
+
 #define TRIG1 23
+
 #define ECHO2 30 // Sensor Izquierdo
+
 #define TRIG2 31
+
 #define ECHO3 36 // Sensor Derecho
+
 #define TRIG3 37
+
 #define ECHO4 46 // Sensor Trasero
+
 #define TRIG4 47
+
 
 Aquí se definen los pines para los sensores ultrasónicos (HC-SR04). Cada sensor tiene dos pines principales:
 - TRIG: Pin para enviar la señal de disparo.
@@ -217,13 +233,21 @@ Aquí se definen los pines para los sensores ultrasónicos (HC-SR04). Cada senso
 
 
 // Definición de Pines del controlador (TB6612)
-#define PWMA 54
+
+#define PWMA 53
+
 #define AIN1 54
+
 #define AIN2 55
+
 #define BIN1 57
+
 #define BIN2 58
+
 #define PWMB 59
+
 #define STBY 70
+
 
 Los pines para controlar el driver de motores TB6612 están definidos. Estos pines permiten controlar la dirección y velocidad de los motores del robot:
 - PWMA y PWMB controlan la velocidad de los motores.
@@ -234,131 +258,210 @@ Los pines para controlar el driver de motores TB6612 están definidos. Estos pin
 #### Variables para el control del tiempo
 
 const unsigned long printInterval = 5000; // Intervalo de 5 segundos
+
 unsigned long previousMillis = 0;
+
 
 Estas variables se utilizan para controlar el intervalo de tiempo entre lecturas de los sensores. printInterval define un intervalo de 5 segundos, mientras que previousMillis guarda el momento en el que se hizo la última lectura.
 
 #### Función setup()
 
 void setup() {
+
   Serial.begin(9600); // Iniciar la comunicación Serial
+  
 
 Aquí se inicia la comunicación serial a una velocidad de 9600 baudios, lo cual permitirá enviar datos al monitor serial.
 
 ##### Configuración del sensor de color
+
   pinMode(S0, OUTPUT);
+  
   pinMode(S1, OUTPUT);
+  
   pinMode(S2, OUTPUT);
+  
   pinMode(S3, OUTPUT);
+  
   pinMode(OUT, INPUT);
+  
   pinMode(LED, OUTPUT);
   
+  
   digitalWrite(S0, HIGH);
+  
   digitalWrite(S1, LOW);
+  
   digitalWrite(LED, HIGH);
+  
 
 Se configuran los pines del sensor de color como entradas o salidas según sea necesario. S0 y S1 controlan la frecuencia de salida, que en este caso se configura al 100%. El LED del sensor se enciende para iluminar el área que se está detectando.
 
 ##### Configuración de los sensores ultrasónicos
+
   pinMode(TRIG1, OUTPUT);
+  
   pinMode(ECHO1, INPUT);
+  
   pinMode(TRIG2, OUTPUT);
+  
   pinMode(ECHO2, INPUT);
+  
   pinMode(TRIG3, OUTPUT);
+  
   pinMode(ECHO3, INPUT);
+  
   pinMode(TRIG4, OUTPUT);
+  
   pinMode(ECHO4, INPUT);
+  
 
 Cada sensor ultrasónico tiene un pin TRIG para enviar la señal y un pin ECHO para recibir la señal reflejada. Aquí se configuran los pines para estos sensores.
 
 ##### Configuración del controlador TB6612
 
   pinMode(AIN2, OUTPUT);
+  
   pinMode(AIN1, OUTPUT);
+  
   pinMode(PWMA, OUTPUT);
+  
   pinMode(BIN1, OUTPUT);
+  
   pinMode(BIN2, OUTPUT);
+  
   pinMode(PWMB, OUTPUT);
+  
   pinMode(STBY, OUTPUT);
+  
   digitalWrite(STBY, HIGH);
+  
 
 Se configuran los pines del controlador de motores como salidas y se saca el controlador del modo standby activando el pin STBY.
 
 #### Función loop()
 
 void loop() {
+
   unsigned long currentMillis = millis();
   
+  
   if (currentMillis - previousMillis >= printInterval) {
+  
     previousMillis = currentMillis;
+    
 
 En el bucle principal (loop()), se revisa si han pasado 5 segundos (printInterval) desde la última vez que se imprimieron los datos. Si es así, se actualiza el temporizador y se realizan nuevas lecturas.
 
 #### Obtener y mostrar datos de sensores
 
   int distanceFront = measureDistance(TRIG1, ECHO1);
+  
   int distanceLeft = measureDistance(TRIG2, ECHO2);
+  
   int distanceRight = measureDistance(TRIG3, ECHO3);
+  
   int distanceBack = measureDistance(TRIG4, ECHO4);
+  
   int redValue, greenValue, blueValue;
+  
   readColor(&redValue, &greenValue, &blueValue);
+  
 
 Se llaman a las funciones measureDistance y readColor para obtener las distancias de los sensores ultrasónicos y los valores de color del sensor TCS3200, respectivamente.
 
 
   Serial.print("Distancia delantera: "); Serial.print(distanceFront); Serial.println(" cm");
+  
   Serial.print("Distancia izquierda: "); Serial.print(distanceLeft); Serial.println(" cm");
+  
   Serial.print("Distancia derecha: "); Serial.print(distanceRight); Serial.println(" cm");
+  
   Serial.print("Distancia trasera: "); Serial.print(distanceBack); Serial.println(" cm");
+  
     
   Serial.print("Color (RGB): ");
+  
   Serial.print("R: "); Serial.print(redValue);
+  
   Serial.print(" G: "); Serial.print(greenValue);
+  
   Serial.print(" B: "); Serial.println(blueValue);
+  
     
   Serial.println("----------------------------");
+  
   }
+  
 }
+
 
 Los resultados de las mediciones de distancia y color se imprimen en el monitor serial, mostrando las distancias y los valores RGB del sensor de color.
 
 #### Función measureDistance()
 
 int measureDistance(int trigPin, int echoPin) {
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
+
   digitalWrite(trigPin, LOW);
   
+  delayMicroseconds(2);
+  
+  digitalWrite(trigPin, HIGH);
+  
+  delayMicroseconds(10);
+  
+  digitalWrite(trigPin, LOW);
+  
+  
   long duration = pulseIn(echoPin, HIGH);
+  
   int distance = duration * 0.034 / 2;
+  
   return distance;
+  
 }
+
 
 Esta función mide la distancia utilizando un sensor ultrasónico. Se envía un pulso corto desde el pin TRIG, y luego se mide el tiempo que tarda en recibir el eco en el pin ECHO. La distancia se calcula en función de ese tiempo.
 
 #### Función readColor()
 
 void readColor(int* redValue, int* greenValue, int* blueValue) {
+
   // Leer el valor rojo
+  
   digitalWrite(S2, LOW);
+  
   digitalWrite(S3, LOW);
+  
   delay(100);
+  
   *redValue = pulseIn(OUT, LOW);
+  
 
   // Leer el valor verde
+  
   digitalWrite(S2, HIGH);
+  
   digitalWrite(S3, HIGH);
+  
   delay(100);
+  
   *greenValue = pulseIn(OUT, LOW);
+  
 
   // Leer el valor azul
+  
   digitalWrite(S2, LOW);
+  
   digitalWrite(S3, HIGH);
+  
   delay(100);
+  
   *blueValue = pulseIn(OUT, LOW);
+  
 }
+
 
 Esta función lee los valores de color (rojo, verde, azul) del sensor TCS3200. Dependiendo de la configuración de los pines S2 y S3, el sensor detecta uno de los tres colores y envía un pulso cuya duración se mide con pulseIn() para obtener los valores RGB.
 
@@ -368,15 +471,20 @@ Esta función lee los valores de color (rojo, verde, azul) del sensor TCS3200. D
 
 Te explico cada parte del código:
 
-### Definición de pines
-
+#### Definición de pines
 
 #define pinPWMA 54
+
 #define pinAIN2 55
+
 #define pinAIN1 56
+
 #define pinBIN1 58
+
 #define pinBIN2 59
+
 #define pinPWMB 60
+
 #define pinSTBY 61
 
 - **pinPWMA**: Pin de velocidad para el motor A. El controlador TB6612 controla la velocidad con una señal PWM (modulación por ancho de pulso).
@@ -385,67 +493,98 @@ Te explico cada parte del código:
 - **pinBIN1, pinBIN2**: Pines que controlan la dirección del motor B, similar a los de A.
 - **pinSTBY**: Pin que activa o desactiva los motores (standby).
 
-### Variables de tiempo y velocidad
+#### Variables de tiempo y velocidad
 
 const int waitTime = 2000;
+
 const int speed = 0;
 
 - **waitTime**: Tiempo de espera en milisegundos entre cada acción.
 - **speed**: Valor inicial de velocidad (aquí es 0, pero se puede cambiar en el loop).
 
-### Matrices de pines de los motores
+#### Matrices de pines de los motores
 
 const int pinMotorA[3] = { pinPWMA, pinAIN2, pinAIN1 };
+
 const int pinMotorB[3] = { pinPWMB, pinBIN1, pinBIN2 };
 
 - Estas matrices agrupan los pines de cada motor para que sea más fácil pasar los pines como argumento a las funciones que los controlan.
 
-### Enumeraciones para el movimiento
+#### Enumeraciones para el movimiento
 
 enum moveDirection {
-  forward,    
-  backward    
+
+  forward,  
+  
+  backward   
+  
 };
+
 enum turnDirection {
-  clockwise,         
+
+  clockwise,     
+  
   counterClockwise   
+  
 };
+
 
 - **moveDirection**: Define las direcciones de movimiento: forward (hacia adelante) y backward (hacia atrás).
 - **turnDirection**: Define los giros: clockwise (horario) y counterClockwise (antihorario).
 
-### Configuración inicial
+#### Configuración inicial
 
 void setup() {
+
   pinMode(pinAIN2, OUTPUT);
+  
   pinMode(pinAIN1, OUTPUT);
+  
   pinMode(pinPWMA, OUTPUT);
+  
   pinMode(pinBIN1, OUTPUT);
+  
   pinMode(pinBIN2, OUTPUT);
+  
   pinMode(pinPWMB, OUTPUT);
+  
 }
+
 
 - Se configuran todos los pines asociados a los motores como salidas.
 
-### Bucle principal (loop)
+#### Bucle principal (loop)
 
 void loop() {
-  enableMotors();          
-  move(forward, 250);      
-  delay(waitTime);         
+
+  enableMotors();  
+  
+  move(forward, 250);  
+  
+  delay(waitTime);    
+  
 
   move(backward, 250);     
-  delay(waitTime);         
+  
+  delay(waitTime);       
+  
 
   turn(clockwise, 250);    
-  delay(waitTime);         
+  
+  delay(waitTime); 
+  
 
   turn(counterClockwise, 250); 
-  delay(waitTime);         
+  
+  delay(waitTime);        
+  
 
-  fullStop();              
+  fullStop();            
+  
   delay(waitTime);         
+  
 }
+
 
 - **enableMotors()**: Activa los motores.
 - **move(forward, 250)**: Mueve el robot hacia adelante con una velocidad de 250 (en una escala PWM).
@@ -454,79 +593,122 @@ void loop() {
 - **turn(counterClockwise, 250)**: Gira en sentido antihorario.
 - **fullStop()**: Detiene todos los motores.
 
-### Función para mover el vehículo hacia adelante o atrás
+#### Función para mover el vehículo hacia adelante o atrás
 
 void move(int direction, int speed) {
+
   if (direction == forward) {
+  
     moveMotorForward(pinMotorA, speed);
+    
     moveMotorForward(pinMotorB, speed);
+    
   } else {
+  
     moveMotorBackward(pinMotorA, speed);
+    
     moveMotorBackward(pinMotorB, speed);
+    
   }
+  
 }
+
 
 - Según la dirección (hacia adelante o atrás), se llaman las funciones correspondientes para mover ambos motores.
 
-### Función para girar
+#### Función para girar
 
 void turn(int direction, int speed) {
+
   if (direction == clockwise) {
+  
     moveMotorForward(pinMotorA, speed);
+    
     moveMotorBackward(pinMotorB, speed);
+    
   } else {
+  
     moveMotorBackward(pinMotorA, speed);
+    
     moveMotorForward(pinMotorB, speed);
+    
   }
+  
 }
+
 
 - Para girar, un motor se mueve hacia adelante y el otro hacia atrás, dependiendo de la dirección del giro.
 
-### Función para detener el vehículo
+#### Función para detener el vehículo
 
 void fullStop() {
+
   disableMotors();
+  
   stopMotor(pinMotorA);
+  
   stopMotor(pinMotorB);
+  
 }
+
 
 - Llama a **disableMotors()** para desactivar los motores y a **stopMotor()** para detener cada motor.
 
-### Funciones para mover los motores
+#### Funciones para mover los motores
 
 void moveMotorForward(const int pinMotor[3], int speed) {
+
   digitalWrite(pinMotor[1], HIGH);  
+  
   digitalWrite(pinMotor[2], LOW);   
+  
   analogWrite(pinMotor[0], speed);  
+  
 }
 
+
 void moveMotorBackward(const int pinMotor[3], int speed) {
+
   digitalWrite(pinMotor[1], LOW);   
+  
   digitalWrite(pinMotor[2], HIGH);  
+  
   analogWrite(pinMotor[0], speed);  
+  
 }
+
 
 - Estas funciones controlan el motor individualmente, estableciendo los pines de dirección y la velocidad según se necesite.
 
-### Función para detener un motor
+#### Función para detener un motor
 
 void stopMotor(const int pinMotor[3]) {
+
   digitalWrite(pinMotor[1], LOW);   
+  
   digitalWrite(pinMotor[2], LOW);   
-  analogWrite(pinMotor[0], 0);      
+  
+  analogWrite(pinMotor[0], 0);    
+  
 }
+
 
 - Detiene completamente un motor poniendo la velocidad en 0 y apagando los pines de dirección.
 
-### Activar y desactivar motores
+#### Activar y desactivar motores
 
 void enableMotors() {
-  digitalWrite(pinSTBY, HIGH);     
+
+  digitalWrite(pinSTBY, HIGH);    
+  
 }
 
 void disableMotors() {
+
   digitalWrite(pinSTBY, LOW);      
+  
 }
+
 
 - **enableMotors()**: Activa los motores al desactivar el modo standby.
 - **disableMotors()**: Desactiva los motores activando el modo standby.
