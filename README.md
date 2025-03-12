@@ -3,39 +3,34 @@ Proyecto: "Geo-Color Bot"
 
 [Version en Inglés](https://github.com/x-lui-x-16/Geo-Color-Bot-Project-ENG)
 
-## Materiales de Ingienería
-Todos los materiales que utilizamos para este proyecto. 
+## Materiales de ingeniería
+Todos los materiales que hemos utilizado para este proyecto. 
 - 1 Arduino Mega R3 2560 (https://docs.arduino.cc/hardware/mega-2560/)
-- 1 TB6612 Puente-H (HW-166)
-- 1 Módulo de Bluetooth (HC-05)
-- 4 Sensores ultrasónicos (HC-SR04) (1 adelante, 1 atrás, los otros dos a la derecha y a la izquierda)
+- 1 Puente H TB6612 (HW-166)
+- 1 Módulo Bluetooth (HC-05)
+- 4 Sensores Ultrasónicos (HC-SR04) (1 frontal, 1 trasero, los otros dos a derecha e izquierda)
 - 1 Sensor de Color (TCS3200) (En la parte inferior del vehículo)
-- 1 Case de 2 Baterías 18650
-- 2 Baterías 18650 (cerca de 7.4 v)
-- 1 Chasis 2wd - Esto incluye:
-    - 1 Base de Acrílico
-    - 2 Motores Amarillos
-    - 2 Ruedas
-    - 1 Rueda Loca
+- 1 Estuche de 3 Baterías 18650
+- 3 Baterías 18650 (alrededor de 11.1v)
+- 1 Chasis 4x4 - Esto incluye:
+    - 1 Base Acrílica
+    - 4 Motores Amarillos
+    - 4 Ruedas
 - ... Protocables
-- Múltiples piezas 3D utilizadas se pueden encontrar en el siguiente directorio.
-[Archivos 3D](archivos3d/)
 
-## Instrucciones de Construcción
-- Chasis 2wd: https://iesjuanlopezmorillas.es/index.php/departamentos/area-cientifico-tecnologica/tecnologia/blog/102-montaje-chasis-coche-2wd
-- Electrónica (Circuito y Batería): [El diagrama del circuito se encuentra en la carpeta de esquemas](esquemas/)
-- Código (Para el Arduino): [El código se encuentra en la carpeta de src](src/)
+## Instrucciones de construcción
+- Chasis 4x4: https://youtu.be/SMiCNY2Cu-A?si=UYj3ABeoVozylZsV
+- Electrónica (Circuito y Batería): [El diagrama del circuito se puede encontrar en el directorio de esquemas](esquemas/)
+- Código (Para el Arduino): [El código se puede encontrar en el directorio src](src/)
 
 ## Contenido
-[Archivos 3d](archivos3d/) En esta carpeta se muestran todos los archivos 3d utilizados.
-
-[Componentes Electromecánicos](componentes-electromecánicos/) En esta carpeta se encuentran todos los componentes electromecánicos utilizados.
+[Componentes electromecánicos](componentes-electromecanicos/) En esta carpeta están todos los componentes electromecánicos utilizados.
 
 [Esquemas](esquemas/) En esta carpeta se muestran todos los esquemas del proyecto. 
 
-[Código](src/) En esta carpeta se encuentra el código utilizados.
+[Code](src/) En esta carpeta se encuentra el código utilizado.
 
-[Imágenes del vehículo](v-photos/) En esta carpeta se encuentran imágenes del vehiculo desde diferentes ángulos.
+[Fotos del vehículo](v-photos/) En esta carpeta encontrarás imágenes del vehículo desde diferentes ángulos.
 
 ## Introducción
 A continuación está el desarrollo y documentación del proyecto Geo-Color Bot, un robot educativo diseñado para apoyar el aprendizaje de personas con dificultades como el TDAH o el daltonismo. El robot utiliza la detección de colores para asociar cada uno con un país específico, proporcionando información relevante sobre el país mediante inteligencia artificial.
@@ -140,44 +135,63 @@ El robot será capaz de adaptarse a diferentes condiciones ambientales, como cam
 El sistema será diseñado con flexibilidad para permitir la integración de nuevas funcionalidades en el futuro, como la incorporación de otros sensores, mejoras en la interfaz de usuario, o la expansión a otras disciplinas educativas. Esta capacidad de expansión asegurará la longevidad del proyecto y aumentará su impacto.
 
 ## Presupuesto
-A continuación se detalla el presupuesto estimado para el desarrollo del proyecto Geo-Color Bot:
+El siguiente es el presupuesto estimado para el desarrollo del proyecto Geo-Color Bot:
 
-- Arduino Mega 2560 - $57.31
-- Sensor de Color TCS3200 - $9.49
-- Sensor Ultrasónico HC-SR04 (x4) - $22.00 ($5.50 c/u)
-- Puente H TB6612 - $3.50
-- Protoboard - $3.00
-- Kit de Arduino 2WD - $10.00
-    - Incluye:
-    - Base de Acrílico
-    - Motor Amarillo
-    - Rueda
-    - Rueda Loca
-- Base de Impresión 3D para Sensores Ultrasónicos (x2) - Donación
-- Case de 2 Baterías 18650 - $3.00
-- Baterías 18650 de 3.7V (x2) - $7.00 ($3.50 c/u)
-- Pack de 10 Cables Dupont Macho-Macho (x3) - $4.50 ($1.50 c/u)
-- Pack de 10 Cables Dupont Macho-Hembra (x2) - $3.00 ($1.50 c/u)
-- Estación de Soldadura con Cautín - $25.95
+- Arduino Mega 2560 R3 - $49.65
+- Sensor de Color TCS3200 - $9.99
+- Kit de 5 Sensores Ultrasónicos (HC-SR04) y sus respectivas Bases - $9.99
+- Kit de 5 Controladores de Motor (TB6612FNG) - $12.99
+- Módulo Bluetooth (HC-05) - $9.99
+- Kit de Protoboard y Cable Dupont - $9.99
+- Pantalla LCD - $11.99
+- Kit Arduino 4WD - $21.49
+      Incluye:
+    - Base Acrílica
+    - 4 Motor Amarillo
+    - 4 Ruedas
+- Estuche de 3 Baterías 18650 - $3.00
+- 3.7V 18650 Baterías (x3) - $10.50 ($3.50 cada una)
+- Estación de Soldadura con Soldador - $25.95
 - Estaño - $12.30
-- Caja de Termoretráctiles - $6.50
-- Pinza Pelacables - $4.29
-- Alicate - $2.50
-- Alicate de Corte - $3.00
+- Caja termoretráctil - $6.50
+- Pelacables - $4.29
+- Alicates - $2.50
+- Alicates de corte - $3.00
 - Mechero - $2.00
-- Tape Transparente - $0.50
-- Tape Doble Contacto - $7.00
-- Cinta Eléctrica de Vinilo Super 33 - $3.00
-- Paquete de Zunchos (x2) - $7.00 ($3.50 c/u)
+- Cinta transparente - $0.50
+- Cinta de doble contacto - $7.00
+- Cinta eléctrica de vinilo Super 33 - $3.00
+- Paquete de zunchos (x2) - $7.00 ($3.50 cada uno)
 
-Total - $196.94
+Total - $226.12
 
 ## Conclusión
-Este proyecto ha logrado desarrollar una herramienta educativa innovadora, enfocada en mejorar el aprendizaje para personas con TDAH y daltonismo. Gracias a la integración del sensor de color TCS3200 y los sensores ultrasónicos HC-SR04, el robot es capaz de detectar colores con gran precisión y navegar de forma segura, proporcionando una experiencia educativa interactiva y accesible.
+La exitosa combinación de tecnología y educación interactiva está representada en el desarrollo y puesta en marcha de un robot autónomo. Este robot es capaz de detectar colores y asociarlos a información educativa sobre distintos países, todo ello gracias a sus sensores ultrasónicos que le permiten moverse por sí solo. Además de mostrar una integración efectiva de componentes electrónicos avanzados como el sensor de color TCS3200 y los sensores ultrasónicos HC-SR04 con el microcontrolador Arduino Nano RP2040, este proyecto también proporciona una plataforma atractiva para aprender jugando.
 
-El diseño garantiza fiabilidad y estabilidad durante el uso prolongado, lo que permite su aplicación en entornos educativos sin interrupciones. Además, su capacidad de adaptación y mejora continua asegura que este proyecto se mantenga relevante y efectivo a largo plazo.
+## Bibliografía
+[Arduino. (s.f.). Arduino Mega 2560 Rev3.](https://www.arduino.cc/en/Main/ArduinoBoardMega2560)
 
-En resumen, el Geo-Color Bot representa un avance significativo hacia la educación inclusiva, proporcionando un aprendizaje más dinámico y personalizado para los usuarios que enfrentan desafíos en la percepción del color y la atención.
+[Borenstein, J. & Koren, Y. (1991). The vector field histogram—Fast obstacle avoidance for mobile robots. IEEE Transactions on Robotics and Automation, 7(3), 278-288. ](https://doi.org/10.1109/70.88137)
+
+[García, E., Jiménez, M., de Santos, P. G., & Armada, M. (2007). The evolution of robotics research. IEEE Robotics & Automation Magazine, 14(1), 90-103.](https://doi.org/10.1109/MRA.2007.339639)
+
+[Instituto Nacional de Estadística y Censo (INEC). (2023). Estadísticas sobre educación en Panamá.](https://www.inec.gob.pa/)
+
+Kernighan, B. W., & Ritchie, D. M. (1988). The C programming language (2nd ed.). Prentice Hall.
+
+Murray, R. M., Li, Z., & Sastry, S. S. (1994). A mathematical introduction to robotic manipulation. CRC Press.
+
+[NASA. (2021). The impact of AI and automation in space exploration.](https://www.nasa.gov/AI_in_Space)
+
+[OCDE. (2022). Tendencias en educación y tecnología: Integración de la robótica en el aprendizaje.](https://www.oecd.org/)
+
+[Panama Canal Authority. (2022). Engineering and sustainability in the Panama Canal expansion.](https://www.pancanal.com/)
+
+Phu, T., & Dung, L. T. (2019). Color detection and recognition using TCS3200 color sensor and Arduino. International Journal of Engineering and Technology, 8(2), 50-55.
+
+[Rouse, M. (2018). What is PWM (Pulse Width Modulation)? TechTarget.](https://www.techtarget.com)
+
+[UNESCO. (2020). Educación inclusiva y el uso de tecnologías en América Latina.](https://unesdoc.unesco.org)
 
 ## Explicación del Código
 ### Código Pricipal
