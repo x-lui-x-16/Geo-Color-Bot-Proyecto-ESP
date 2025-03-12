@@ -12,14 +12,14 @@ Todos los materiales que hemos utilizado para este proyecto.
 - 1 Sensor de Color (TCS3200) (En la parte inferior del vehículo)
 - 1 Estuche de 3 Baterías 18650
 - 3 Baterías 18650 (alrededor de 11.1v)
-- 1 Chasis 4x4 - Esto incluye:
+- 1 Chasis 4wd - Esto incluye:
     - 1 Base Acrílica
     - 4 Motores Amarillos
     - 4 Ruedas
 - ... Protocables
 
 ## Instrucciones de construcción
-- Chasis 4x4: https://youtu.be/SMiCNY2Cu-A?si=UYj3ABeoVozylZsV
+- Chasis 4wd: https://youtu.be/kurIK5AGhnw?si=gg4Zbn1UOIr4_YVg
 - Electrónica (Circuito y Batería): [El diagrama del circuito se puede encontrar en el directorio de esquemas](esquemas/)
 - Código (Para el Arduino): [El código se puede encontrar en el directorio src](src/)
 
