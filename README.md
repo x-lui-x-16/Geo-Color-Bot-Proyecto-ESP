@@ -6,17 +6,29 @@ Proyecto: "Geo-Color Bot"
 ## Materiales de ingeniería
 Todos los materiales que hemos utilizado para este proyecto. 
 - 1 Arduino Mega R3 2560 (https://docs.arduino.cc/hardware/mega-2560/)
-- 1 Puente H TB6612 (HW-166)
-- 1 Módulo Bluetooth (HC-05)
+- 2 Puente H TB6612 (HW-166)
 - 4 Sensores Ultrasónicos (HC-SR04) (1 frontal, 1 trasero, los otros dos a derecha e izquierda)
 - 1 Sensor de Color (TCS3200) (En la parte inferior del vehículo)
-- 1 Estuche de 3 Baterías 18650
-- 3 Baterías 18650 (alrededor de 11.1v)
+- 1 Pantalla LCD I2C
+- 4 Leds
+- 1 Pack de baterias 18650 en configuración 2s2p
+      Parámetro	            Valor aproximado
+     Voltaje nominal	        7.4 V
+     Voltaje máximo	            8.4 V
+     Voltaje mínimo	            5.0 V
+     Capacidad	                5.2 Ah
+     Corriente máx.	        10 A (con buenas celdas)
+    Duración estimada	    2 h (con consumo de ~2.2 A)
+- 4 Baterías 18650
+- 1 Modulo BMS 2S 10A con balance para 18650 (7.4V)
+- 1 LM2596 Buck Converter 5V 3A (ajustable)
 - 1 Chasis 4wd - Esto incluye:
     - 1 Base Acrílica
     - 4 Motores Amarillos
     - 4 Ruedas
 - ... Protocables
+- 2 Protoboards
+- ... Zunchos
 
 ## Instrucciones de construcción
 - Chasis 4wd: https://youtu.be/kurIK5AGhnw?si=gg4Zbn1UOIr4_YVg
@@ -44,7 +56,7 @@ Componentes Principales:
 - Microcontrolador: Arduino Mega 2560
 - Sensores de color: TCS3200
 - Sensores ultrasónicos: HC-SR04 (x4)
-- Comunicación inalámbrica: Módulo Bluetooth HC-05
+- Pantalla: LCD I2C 
 - Lenguaje de programación: C++ (Arduino IDE)
 
 Funcionalidad:
@@ -58,7 +70,7 @@ Objetivos Específicos:
 - Diseñar e implementar un robot autónomo que utilice un sensor de color TCS3200 para identificar colores y asociarlos con información educativa, como países y sus características, permitiendo a los usuarios aprender de manera dinámica y contextualizada.
 - Realizar una programación precisa para controlar el robot, asegurando que todos los sensores y motores funcionen de manera coordinada y eficiente. Esta programación incluirá algoritmos que permitan al robot detectar colores, medir distancias y tomar decisiones autónomas, convirtiendo al robot en una herramienta útil y aplicable en el mundo real.
 - Integrar sensores ultrasónicos HC-SR04 en el sistema robótico para garantizar que el robot pueda navegar de manera segura, evitar obstáculos y posicionarse adecuadamente para realizar la detección de colores en diferentes entornos.
-- Desarrollar una interfaz de comunicación mediante el módulo Bluetooth HC-05, que permita transmitir los datos de color y las distancias medidas por el robot a una computadora, facilitando el monitoreo y el análisis de la información en tiempo real.
+- Desarrollar una interfaz con una pantalla LCD, que permita mostrar los datos de color y las distancias medidas por el robot a una computadora, facilitando el monitoreo y el análisis de la información en tiempo real.
 - Evaluar la efectividad del método educativo propuesto mediante pruebas con usuarios que presenten TDAH y daltonismo, recopilando datos sobre su experiencia de aprendizaje y ajustando el sistema según sea necesario para mejorar su accesibilidad y eficacia.
 - Promover el uso de tecnologías robóticas en el ámbito educativo, demostrando cómo herramientas interactivas y adaptativas pueden hacer el aprendizaje más accesible y atractivo para personas con diversas necesidades educativas.
 
@@ -141,29 +153,28 @@ El siguiente es el presupuesto estimado para el desarrollo del proyecto Geo-Colo
 - Sensor de Color TCS3200 - $9.99
 - Kit de 5 Sensores Ultrasónicos (HC-SR04) y sus respectivas Bases - $9.99
 - Kit de 5 Controladores de Motor (TB6612FNG) - $12.99
-- Módulo Bluetooth (HC-05) - $9.99
-- Kit de Protoboard y Cable Dupont - $9.99
-- Pantalla LCD - $11.99
+- Kit de Protoboard y Cable Dupont (x2) - $19.98 ($9.99 cada uno)
+- Pantalla LCD - $12.99
 - Kit Arduino 4WD - $21.49
       Incluye:
     - Base Acrílica
     - 4 Motor Amarillo
     - 4 Ruedas
-- Estuche de 3 Baterías 18650 - $3.00
-- 3.7V 18650 Baterías (x3) - $10.50 ($3.50 cada una)
+- Estuches individuales de Baterías 18650 - $7.99
+- 3.7V 18650 Baterías (x4) - $23.96 ($5.99 cada una)
+- Modulo BMS 2S 10A con balance para 18650 (7.4V) - $12.93
+- LM2596 Buck Converter 5V 3A (ajustable) - $10.49
 - Estación de Soldadura con Soldador - $25.95
 - Estaño - $12.30
 - Caja termoretráctil - $6.50
 - Pelacables - $4.29
-- Alicates - $2.50
+- Alicates - $5.00
 - Alicates de corte - $3.00
 - Mechero - $2.00
-- Cinta transparente - $0.50
-- Cinta de doble contacto - $7.00
 - Cinta eléctrica de vinilo Super 33 - $3.00
 - Paquete de zunchos (x2) - $7.00 ($3.50 cada uno)
 
-Total - $226.12
+Total - $261.49
 
 ## Conclusión
 La exitosa combinación de tecnología y educación interactiva está representada en el desarrollo y puesta en marcha de un robot autónomo. Este robot es capaz de detectar colores y asociarlos a información educativa sobre distintos países, todo ello gracias a sus sensores ultrasónicos que le permiten moverse por sí solo. Además de mostrar una integración efectiva de componentes electrónicos avanzados como el sensor de color TCS3200 y los sensores ultrasónicos HC-SR04 con el microcontrolador Arduino Nano RP2040, este proyecto también proporciona una plataforma atractiva para aprender jugando.
@@ -772,3 +783,26 @@ Este código ofrece un control básico pero flexible para un sistema con dos mot
 
 ## Gestión de Energía
 
+- Topología del pack:
+    - Configuración 2S2P de 4×18650 → 7.4 V nominal, 5.2 Ah.
+    - Módulo BMS 2S 10 A con balance.
+    - Buck converter LM2596 (7.4–8.4 V → 5 V @ ≥ 3 A) para la electrónica.
+
+- Conexiones clave:
+    - Celdas: dos grupos en paralelo (2 × 2.6 Ah) en serie → 7.4 V nominal.
+    - BMS:
+      B– al negativo del Grupo A.
+      B1 al punto medio (entre Grupo A y Grupo B).
+      B+ al positivo del Grupo B.
+      P–/P+ salidas hacia robot (P+ = B+; P– = negativo común).
+    - Buck:
+      IN+ = P+.
+      IN– = P–.
+      OUT+ = 5 V → Arduino + sensores.
+      OUT– = GND → Arduino + sensores.
+
+- Objetivo de la gestión de energía:
+    - Monitorear el voltaje del pack para prevenir sobredescarga.
+    - Alertar al usuario (por Serial o BLE) cuando baje de umbral (p.ej. < 6 V).
+    - (Opcional) Apagar pasos de código que consumen mucho al superar cierto límite.
+ 
