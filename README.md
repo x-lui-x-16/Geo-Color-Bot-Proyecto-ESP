@@ -12,13 +12,12 @@ Todos los materiales que hemos utilizado para este proyecto.
 - 1 Pantalla LCD I2C
 - 4 Leds
 - 1 Pack de baterias 18650 en configuración 2s2p
-      Parámetro	            Valor aproximado
-     Voltaje nominal	        7.4 V
-     Voltaje máximo	            8.4 V
-     Voltaje mínimo	            5.0 V
-     Capacidad	                5.2 Ah
-     Corriente máx.	        10 A (con buenas celdas)
-    Duración estimada	    2 h (con consumo de ~2.2 A)
+    - Voltaje nominal	    7.4 V
+    - Voltaje máximo	    8.4 V
+    - Voltaje mínimo	    5.0 V
+    - Capacidad	          5.2 Ah
+    - Corriente máx.	    10 A
+    - Duración estimada	    2 h (con consumo de ~2.2 A)
 - 4 Baterías 18650
 - 1 Modulo BMS 2S 10A con balance para 18650 (7.4V)
 - 1 LM2596 Buck Converter 5V 3A (ajustable)
