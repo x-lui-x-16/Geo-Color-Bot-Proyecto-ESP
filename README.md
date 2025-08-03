@@ -6,11 +6,10 @@ Proyecto: "Geo-Color Bot"
 ## Materiales de ingeniería
 Todos los materiales que hemos utilizado para este proyecto. 
 - 1 Arduino Mega R3 2560 (https://docs.arduino.cc/hardware/mega-2560/)
-- 2 Puente H TB6612 (HW-166)
+- 2 Puente H L298N
 - 4 Sensores Ultrasónicos (HC-SR04) (1 frontal, 1 trasero, los otros dos a derecha e izquierda)
 - 1 Sensor de Color (TCS3200) (En la parte inferior del vehículo)
 - 1 Pantalla LCD I2C
-- 4 Leds
 - 1 Pack de baterias 18650 en configuración 2s2p
     - Voltaje nominal	    7.4 V
     - Voltaje máximo	    8.4 V
@@ -20,14 +19,14 @@ Todos los materiales que hemos utilizado para este proyecto.
     - Duración estimada	    2 h (con consumo de ~2.2 A)
 - 4 Baterías 18650
 - 1 Modulo BMS 2S 10A con balance para 18650 (7.4V)
-- 1 LM2596 Buck Converter 5V 3A (ajustable)
-- 1 Chasis 4wd - Esto incluye:
-    - 1 Base Acrílica
-    - 4 Motores Amarillos
-    - 4 Ruedas
-- ... Protocables
-- 2 Protoboards
-- ... Zunchos
+- 2 Base Acrílica 4wd
+- 4 Motores Amarillos
+- 4 Ruedas Omnidireccionales
+- 46 Protocables
+- 1 Parte de una Protoboard
+- 42 Zunchos
+- 4 Palitos de Paleta
+- Silicona Caliente
 
 ## Instrucciones de construcción
 - Chasis 4wd: https://youtu.be/kurIK5AGhnw?si=gg4Zbn1UOIr4_YVg
